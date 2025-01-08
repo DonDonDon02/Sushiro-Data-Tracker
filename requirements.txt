@@ -1,0 +1,5 @@
+requests
+pytz
+pandas
+schedule
+sqlite3

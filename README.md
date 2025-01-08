@@ -18,19 +18,25 @@ This project is a data tracker for Sushiro Hong Kong stores. It fetches real-tim
 ## Installation
 
 1. Clone the repository:
-   `git clone https://github.com/DonDonDon02/Sushiro-Data-Tracker.git`  
-   `cd Sushiro-Data-Tracker`
+   ```bash
+   git clone https://github.com/DonDonDon02/Sushiro-Data-Tracker.git
+   ```  
+   ```bash
+   cd Sushiro-Data-Tracker
+   ```
 
 2. Install the required dependencies:
-   `pip install -r requirements.txt`
-
+   ```bash
+   pip install -r requirements.txt
 ---
 
 ## Usage
 
 1. **Run the script**:
-   `python main.py`
-
+   ```bash
+   python main.py
+   ```
+    The script will start fetching data and store it in an SQLite database (`sushiro_dataset.db`). 
 2. **How it works**:
    - The script fetches data from the Sushiro API and combines it into a single dataset.
    - Data is stored in an SQLite database (`sushiro_dataset.db`) and periodically updated during operating hours.
@@ -46,9 +52,11 @@ This project is a data tracker for Sushiro Hong Kong stores. It fetches real-tim
 The `transform_load.py` script is used to process and export data from the SQLite database (`sushiro_dataset.db`) created by the `main.py` script. It retrieves data from the `store` table, transforms it into a more analyzable format, and saves it as a CSV file (`sushiro_dataset.csv`).
 
 #### **Steps to Use**:
-1. Ensure the database (`sushiro_dataset2.db`) exists and is populated by running `main.py`.
+1. Ensure the database (`sushiro_dataset.db`) exists and is populated by running `main.py`.
 2. Run the script:
-   `python transform_load.py `
+   ```bash
+   python transform_load.py 
+   ```
 3. The script will:
    - Extract and process the `mixedQueue` column to create a new column `mixedQueue_first` (first element of the `mixedQueue` list).
    - Add a column for the day of the week (`weekday`) extracted from the `timestamp`.
