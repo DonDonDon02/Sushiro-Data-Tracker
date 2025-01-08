@@ -58,8 +58,6 @@ The `transform_load.py` script is used to process and export data from the SQLit
    python transform_load.py 
    ```
 3. The script will:
-   - Extract and process the `mixedQueue` column to create a new column `mixedQueue_first` (first element of the `mixedQueue` list).
-   - Add a column for the day of the week (`weekday`) extracted from the `timestamp`.
    - Save the transformed data to a CSV file named `sushiro_dataset.csv` in the current directory. 
 
 This CSV file can then be used for further data analysis or visualization.
